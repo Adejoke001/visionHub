@@ -1,0 +1,185 @@
+/* .news{
+    padding: 20px, 40px;
+    margin: auto;
+}
+
+.our-news {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.couple{
+    width: 100%;
+    height: 80%;
+}
+.motive h1{
+    font-family:'Libre Baskerville';
+    text-align: center;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 3.5rem;
+
+}
+.motive p{
+      font-family:'Libre Baskerville';
+}
+@media (max-width: 900px) {
+  .news {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .our-news {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .couple {
+    grid-template-columns: 12fr;
+    gap: 20px;
+  }
+} */
+
+.container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .news {
+            padding: 30px 20px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .our-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .couple {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .couple img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .couple img:hover {
+            transform: scale(1.02);
+        }
+        
+        .motive {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .motive h1 {
+            font-family: 'Libre Baskerville', serif;
+            text-align: start;
+            font-style: normal;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: #2c7a7b;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .motive p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a5568;
+            text-align: start;
+        }
+        
+        @media (max-width: 900px) {
+            .news {
+                padding: 25px 20px;
+            }
+            
+            .our-news {
+                gap: 30px;
+            }
+            
+            .motive h1 {
+                font-size: 2.4rem;
+                line-height: 1.3;
+            }
+            
+            .motive p {
+                font-size: 1.05rem;
+            }
+        }
+        
+        
+        @media (max-width: 768px) {
+            .our-news {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .motive h1 {
+                font-size: 2.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .motive p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .news {
+                padding: 20px 15px;
+                border-radius: 12px;
+            }
+            
+            .our-news {
+                gap: 25px;
+            }
+            
+            .motive h1 {
+                font-size: 1.9rem;
+                line-height: 1.3;
+            }
+            
+            .motive p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+
+        .serve ul li{
+            line-height:1.5rem;
+            font-family:'Libre Baskerville';
+            font-weight: 600;
+            font-style: inherit;
+            font-size: 16px;
+        }
+        .serve ul li:hover{
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+
+        }
+        .serve .button:hover{
+            background-color: #0dbec1d3;
+            transform: skew(2);
+            transition: transform 0.3s ease;
+        }

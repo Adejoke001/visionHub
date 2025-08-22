@@ -1,0 +1,8 @@
+.absolute .button-main{
+    transition: background-color 0.3s ease;
+}
+.absolute .button-main:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    color: whitesmoke;
+}

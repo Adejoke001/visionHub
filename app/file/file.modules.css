@@ -1,0 +1,7 @@
+button:hover {
+    background-color: #18b6cbe1;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+}

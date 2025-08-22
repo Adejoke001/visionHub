@@ -1,0 +1,13 @@
+.nav a:hover{
+    color: teal;
+
+}
+nav .logo:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+nav button:hover {
+    background-color: rgba(0, 128, 128, 0.849);
+}
