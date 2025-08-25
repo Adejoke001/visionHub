@@ -108,13 +108,13 @@ const Reviews = () => {
     },
     {
       id: 4,
-      image: assets.couple,
+      image: assets.couple2,
       name: "Sarah & Michael",
       text: `"We were on the verge of separation when we found VisionHub. Their communication techniques transformed our relationship. We're now stronger than ever and even planning to start a family!"`
     },
     {
       id: 5,
-      image: assets.review3,
+      image: assets.review5,
       name: "Robert Johnson",
       text: `"The personal growth program helped me overcome anxiety and build confidence. I've since been promoted at work and finally feel in control of my life. Thank you for the incredible transformation!"`
     }
@@ -173,7 +173,7 @@ const Reviews = () => {
                   />
                 </div>
                 <h3 className="text-xl font-medium mb-3">{review.name}</h3>
-                <p className="font-Ovo flex-grow italic">"{review.text}"</p>
+                <p className="font-Ovo flex-grow italic">{review.text}</p>
                 <div className="flex justify-center mt-4">
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
