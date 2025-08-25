@@ -40,12 +40,12 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center bg-teal-600 p-6 rounded-lg">
-            <a className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2">
               <Icon.Envelope className="icon w-7 h-6 text-teal-800 border rounded-full bg-white p-1" />
               <h4 className="text-xl font-semibold text-white"><Link href='#'>Email us</Link></h4>
               <h5 className="text-xl font-normal text-white"><Link href='#'>visionhub@gmail.com</Link></h5>
               <h5 className="text-xl font-normal text-white"><Link href='#'>info@vision.com</Link></h5>
-          </a>
+          </div>
           </div>
 
           <div className="flex flex-col items-center justify-center bg-teal-600 p-5 rounded-lg">
