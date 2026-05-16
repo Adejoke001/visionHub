@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 const outfit = Outfit({
-  subsets: ["latin"], weight: ["400", "500", "600","700" ]
+  subsets: ["latin"], weight: ["400", "500", "600","700" ],
 });
 
 const ovo = Ovo({

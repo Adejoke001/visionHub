@@ -58,8 +58,8 @@ const Footer = () => {
             <address className={styles.address}>
               123 Company St.<br />
               City, State 12345<br />
-              Email: info@company.com<br />
-              Phone: (123) 456-7890
+              <a href="mailto:visionhub@gmail.com">Email: visionhub.com<br/></a>
+              <a href="tel:08140074633">Phone: +234 8140074633</a>
             </address>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Footer = () => {
       
       {/* Footer-bottom */}
       <footer className={styles.footerBottom}>
-        <p>© 2023 Vision Hub. All rights reserved.</p>
+        <p>© 2025 Vision Hub. All rights reserved.</p>
       </footer>
     </div>
   );
