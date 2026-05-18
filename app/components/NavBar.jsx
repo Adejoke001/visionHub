@@ -2,20 +2,23 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
 const NavBar = () => {
   const sideMenuRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(0)";
+    setIsMenuOpen(true);
     document.body.style.overflow = "hidden";
   };
   
   const closeMenu = () => {
     sideMenuRef.current.style.transform = "translateX(100%)";
+    setIsMenuOpen(false);
     document.body.style.overflow = "unset";
   };
 
@@ -77,9 +80,9 @@ const NavBar = () => {
         </button>
       </nav>
 
-      {/* Mobile Menu Overlay */}
-      {typeof document !== 'undefined' && (
-        <div className={styles.mobileOverlay} id="mobile-overlay" onClick={closeMenu}></div>
+      {/* Mobile Menu Overlay - Fixed hydration issue */}
+      {isMenuOpen && (
+        <div className={styles.mobileOverlay} onClick={closeMenu}></div>
       )}
       
       {/* Mobile Side Menu */}

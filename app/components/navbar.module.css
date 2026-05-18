@@ -419,3 +419,43 @@
     transform: none;
   }
 }
+/* Mobile Overlay - Fixed */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Menu - Updated z-index */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5rem 2rem 2rem 2rem;
+  background: linear-gradient(135deg, #0f766e 0%, #0d5d56 100%);
+  width: 16rem;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
