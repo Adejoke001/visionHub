@@ -1,0 +1,421 @@
+/* Navbar Container */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 1rem 1.20rem;
+  background-color: white;
+  min-height: 3.60rem;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 1rem calc(8%);
+  }
+}
+
+/* Logo */
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 7.5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 12.5rem;
+  }
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    gap: 2rem;
+  }
+}
+
+.navItem {
+  list-style: none;
+}
+
+.navLink {
+  font-family: 'Ovo', serif;
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #0f766e;
+}
+
+/* Active link indicator */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0f766e;
+  transition: width 0.2s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Contact nav item (desktop) */
+.contactNavItem {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .contactNavItem {
+    display: flex;
+  }
+}
+
+.contactNavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #1f2937;
+  font-family: 'Ovo', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contactNavLink:hover {
+  color: #0f766e;
+}
+
+.contactIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Desktop Book Button */
+.desktopBookBtn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopBookBtn {
+    display: block;
+  }
+}
+
+.bookButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0f766e;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .bookButton {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.bookButton:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.bookButton span {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'Ovo', serif;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .bookButton span {
+    font-size: 1rem;
+  }
+}
+
+.bookButton:hover span {
+  color: #0f766e;
+}
+
+.bookIcon {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .bookIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.bookButton:hover .bookIcon {
+  color: #0f766e;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuIcon {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  display: none;
+}
+
+.mobileMenu:not([style*="translateX(0)"]) ~ .mobileOverlay {
+  display: none;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5rem 2rem 2rem 2rem;
+  background: linear-gradient(135deg, #0f766e 0%, #0d5d56 100%);
+  width: 16rem;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenuHeader {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover .closeIcon {
+  transform: scale(1.1);
+}
+
+/* Mobile Navigation Items */
+.mobileNavItem {
+  list-style: none;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: white;
+  font-family: 'Ovo', serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.mobileNavLink:hover {
+  padding-left: 0.5rem;
+  opacity: 0.8;
+}
+
+/* Mobile Book Button */
+.mobileBookItem {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.mobileBookButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.mobileBookButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobileBookButton span {
+  color: #0f766e;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Ovo', serif;
+}
+
+.mobileBookIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #0f766e;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #1e293b;
+  }
+  
+  .navLink {
+    color: #e2e8f0;
+  }
+  
+  .contactNavLink {
+    color: #e2e8f0;
+  }
+  
+  .menuIcon {
+    color: #e2e8f0;
+  }
+  
+  .mobileMenu {
+    background: linear-gradient(135deg, #0f766e 0%, #0a4747 100%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 360px) {
+  .mobileMenu {
+    width: 100%;
+  }
+}
+
+/* Accessibility - Focus States */
+.navLink:focus,
+.contactNavLink:focus,
+.bookButton:focus,
+.mobileNavLink:focus,
+.mobileBookButton:focus,
+.closeButton:focus,
+.menuButton:focus {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .mobileMenu,
+  .navLink::after,
+  .bookButton,
+  .mobileNavLink,
+  .mobileBookButton,
+  .closeIcon {
+    transition: none;
+  }
+  
+  .mobileMenu {
+    transition: none;
+  }
+  
+  .bookButton:hover {
+    transform: none;
+  }
+}

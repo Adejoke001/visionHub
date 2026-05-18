@@ -1,0 +1,461 @@
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-bottom: 4rem;
+}
+
+/* Header Section */
+.headerWrapper {
+  text-align: center;
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.headerIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f766e;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .contactTitle {
+    font-size: 1.75rem;
+  }
+}
+
+.titleIcon {
+  font-size: 1.75rem;
+  color: #0f766e;
+}
+
+@media (min-width: 640px) {
+  .titleIcon {
+    font-size: 2rem;
+  }
+}
+
+.headerSubtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .mainTitle {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+}
+
+.arrowDown {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.arrowIcon {
+  font-size: 2rem;
+  color: #0f766e;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.getInTouch {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.getInTouchTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .getInTouchTitle {
+    font-size: 1.875rem;
+  }
+}
+
+/* Contact Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 72rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem;
+  }
+}
+
+.contactCard {
+  background: linear-gradient(135deg, #0f766e 0%, #0d5d56 100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contactCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrapper {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #0f766e;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin: 0.25rem 0;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.cardLink {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cardLink:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.cardText {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+/* Form Section */
+.formSection {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.formWrapper {
+  width: 100%;
+}
+
+.formCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .formCard {
+    padding: 2rem;
+  }
+}
+
+.formTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f5b5b;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .formTitle {
+    font-size: 2.25rem;
+  }
+}
+
+/* Form Elements */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: #9ca3af;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Messages */
+.successMessage {
+  background-color: #d1fae5;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  animation: slideDown 0.3s ease;
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submit Button */
+.submitButton {
+  width: 100%;
+  background-color: #0f766e;
+  color: white;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #115e59;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  
+  .mainTitle,
+  .getInTouchTitle {
+    color: #f1f5f9;
+  }
+  
+  .formCard {
+    background-color: #1e293b;
+  }
+  
+  .formTitle {
+    color: #2dd4bf;
+  }
+  
+  .label {
+    color: #cbd5e1;
+  }
+  
+  .input,
+  .textarea {
+    background-color: #334155;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: #2dd4bf;
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+  }
+  
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #94a3b8;
+  }
+  
+  .successMessage {
+    background-color: #064e3b;
+    color: #a7f3d0;
+  }
+  
+  .errorMessage {
+    background-color: #7f1d1d;
+    color: #fecaca;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .headerWrapper {
+    padding-top: 3rem;
+  }
+  
+  .contactTitle {
+    font-size: 1.25rem;
+  }
+  
+  .mainTitle,
+  .getInTouchTitle {
+    font-size: 1.25rem;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+  
+  .cardsGrid {
+    padding: 0 1rem;
+  }
+  
+  .contactCard {
+    padding: 1.25rem;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .arrowIcon {
+    animation: none;
+  }
+  
+  .contactCard,
+  .submitButton {
+    transition: none;
+  }
+  
+  .contactCard:hover {
+    transform: none;
+  }
+  
+  .successMessage,
+  .errorMessage {
+    animation: none;
+  }
+}
