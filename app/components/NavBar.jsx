@@ -3,7 +3,6 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useRef, useEffect } from "react";
-import React from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
