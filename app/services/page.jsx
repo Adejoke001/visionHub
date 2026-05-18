@@ -32,7 +32,7 @@ const Services = () => {
             judgment-free space.
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
 
@@ -44,7 +44,7 @@ const Services = () => {
             self-growth with a licensed counselor tailored to your unique needs. Quality service is assured.
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
 
@@ -56,7 +56,7 @@ const Services = () => {
             journey together with clarity and confidence. Let's build with trust yielding a lasting relationship.
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
 
@@ -68,7 +68,7 @@ const Services = () => {
             care. Your privacy is our priority.
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
 
@@ -80,7 +80,7 @@ const Services = () => {
             and understanding - growing bonds. 
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
 
@@ -92,7 +92,7 @@ const Services = () => {
             thoughts with empathy and expertise.
           </p>
           <button onClick={() => setShowModal(true)} className={styles.bookButton}>
-            <a href="#booking" target='_blank'>Book a Session</a>
+            <a href="/booking">Book a Session</a>
           </button>
         </div>
       </div>

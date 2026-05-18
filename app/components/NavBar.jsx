@@ -111,7 +111,7 @@ const NavBar = () => {
             <Link href="/services">Services</Link>
           </li>
           <li className="font-Ovo">
-            <Link href="/blog">Blogs</Link>
+            <Link href="/blogs">Blogs</Link>
           </li>
           <li className="hidden lg:flex items-center gap-2 py-2.5 font-Ovo">
             <Link href="/contact" className="flex items-center gap-2">
@@ -123,7 +123,6 @@ const NavBar = () => {
           <button className="hidden md:block  bg-teal-700 rounded-full px-5.5 md:py-1 py-1.8 hover:bg-white hover:text-teal-600 transition font-Ovo">
             <Link
               href="/booking"
-              target="_blank"
               className="flex items-center text-white text-sm md:text-lg font-bold hover:text-white-600 transition"
             >
               <Icon.CalendarCheck

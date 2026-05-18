@@ -1,0 +1,258 @@
+/* Header Section */
+.header {
+  text-align: center;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f5b5b;
+  text-align: center;
+  font-family: 'Ovo', serif;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+.subtitle {
+  color: #374151;
+  font-family: 'Ovo', serif;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Grid Container */
+.gridContainer {
+  padding: 2.5rem 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .gridContainer {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Blog Card Styles */
+.blogCard {
+  font-family: 'Ovo', serif;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  padding-bottom: 1rem;
+  background: white;
+  transition: all 0.35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blogCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: rgba(15, 118, 110, 0.3);
+}
+
+/* Image Section */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.blogImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 0.5rem;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.03);
+}
+
+/* Card Content */
+.cardContent {
+  text-align: center;
+  padding: 0 0.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  color: #0f5b5b;
+  padding-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .blogTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.blogSubtitle {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .blogSubtitle {
+    font-size: 1rem;
+  }
+}
+
+.blogExcerpt {
+  color: #6b7280;
+  font-family: 'Ovo', serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+@media (min-width: 640px) {
+  .blogExcerpt {
+    font-size: 0.9rem;
+  }
+}
+
+/* Read More Button */
+.readMore {
+  display: inline-block;
+  background-color: #0f766e;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.readMore:hover {
+  background-color: #115e59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 118, 110, 0.3);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: #2dd4bf;
+  }
+  
+  .subtitle {
+    color: #cbd5e1;
+  }
+  
+  .blogCard {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .blogTitle {
+    color: #2dd4bf;
+  }
+  
+  .blogSubtitle {
+    color: #94a3b8;
+  }
+  
+  .blogExcerpt {
+    color: #cbd5e1;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .blogTitle {
+    font-size: 1.35rem;
+  }
+  
+  .blogExcerpt {
+    font-size: 0.95rem;
+  }
+  
+  .readMore {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .blogCard,
+  .blogImage,
+  .readMore {
+    transition: none;
+  }
+  
+  .blogCard:hover {
+    transform: none;
+  }
+  
+  .readMore:hover {
+    transform: none;
+  }
+}

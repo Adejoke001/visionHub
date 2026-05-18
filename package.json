@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
-    "next": "15.4.10",
+    "next": "^15.5.18",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "swiper": "^11.2.10"
+    "swiper": "^12.1.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
