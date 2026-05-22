@@ -388,7 +388,7 @@
 }
 
 /* Accessibility - Focus States */
-.navLink:focus,
+
 .contactNavLink:focus,
 .bookButton:focus,
 .mobileNavLink:focus,
@@ -458,4 +458,12 @@
   list-style: none;
   margin: 0;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.navLink.active {
+  color: #0f766e;
+}
+
+.navLink.active::after {
+  width: 100%;
 }

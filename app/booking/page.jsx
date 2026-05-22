@@ -17,12 +17,17 @@ const Booking = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const services = [
-    { value: "couples", label: "Couples Therapy" },
-    { value: "individual", label: "Individual Counseling" },
-    { value: "family", label: "Family Therapy" },
-    { value: "crisis", label: "Crisis Support" },
-  ];
+ const services = [
+  { value: "couples", label: "Couples Therapy" },
+  { value: "family", label: "Family Therapy" },
+  { value: "individual", label: "Individual & Teen Counseling" },
+  { value: "premarital", label: "Premarital Counseling" },
+  { value: "recovery", label: "Behavioral Recovery Services" },
+  { value: "stress", label: "Stress & Anxiety Support" },
+  { value: "grief", label: "Grief Counseling" },
+  { value: "crisis", label: "Crisis Intervention" },
+  { value: "virtual", label: "Virtual Counseling" },
+];
 
   const selectedService = services.find(s => s.value === formData.service);
 
@@ -112,7 +117,7 @@ const Booking = () => {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="John Doe"
+                placeholder="Full Name"
               />
             </div>
 
@@ -128,13 +133,13 @@ const Booking = () => {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="john@example.com"
+                placeholder="email@example.com"
               />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="phone" className={styles.label}>
-                Phone (Optional)
+                Phone Number
               </label>
               <input
                 type="tel"

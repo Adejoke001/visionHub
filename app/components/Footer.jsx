@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './footer.module.css';
-import {assets} from '@/assets/assets';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import styles from "./footer.module.css";
+import { assets } from "@/assets/assets";
+import Image from "next/image";
+import Link from "next/link";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 const Footer = () => {
@@ -13,58 +13,92 @@ const Footer = () => {
         <div className={styles.footerContent}>
           <div className={styles.mainSection}>
             <div className={styles.logo}>
-              <Link href='/'>  
-              <Image 
-            src={assets.visionLogo}
-            alt='visionLogo'
-            priority= {true} />
-            </Link>
+              <Link href="/">
+                <Image
+                  src={assets.visionLogo}
+                  alt="visionLogo"
+                  priority={true}
+                />
+              </Link>
             </div>
-            <p>Transforming relationships through compassionate guidance, emotional healing, 
-              and renewed connection. Your journey to stronger bonds begins here.</p>
+            <p>
+              Compassionate counseling for individuals, teens, couples, and
+              families — helping you heal, grow, and navigate life with
+              confidence and support.
+            </p>
             <div className={styles.socialLinks}>
-              <Link href="#" className={styles.socialLink}><Icon.FacebookLogo/></Link>
-              <Link href="#" className={styles.socialLink}><Icon.WhatsappLogo /></Link>
-              <Link href="#" className={styles.socialLink}><Icon.InstagramLogo /></Link>
-              <Link href="#" className={styles.socialLink}><Icon.TwitterLogo /></Link>
+              <Link href="#" className={styles.socialLink}>
+                <Icon.FacebookLogo />
+              </Link>
+              <Link href="#" className={styles.socialLink}>
+                <Icon.WhatsappLogo />
+              </Link>
+              <Link href="#" className={styles.socialLink}>
+                <Icon.InstagramLogo />
+              </Link>
+              <Link href="#" className={styles.socialLink}>
+                <Icon.TwitterLogo />
+              </Link>
             </div>
           </div>
-          
+
           <div className={styles.column}>
             <h3>Quick Links</h3>
-           
-           <ul className={styles.linkList}>
-              <li><Link href='/'>Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+
+            <ul className={styles.linkList}>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/services">Services</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
             </ul>
-          
           </div>
-          
+
           <div className={styles.column}>
             <h3>Services</h3>
             <ul className={styles.linkList}>
-              <li><a href="#">24/7 Counseling Support</a></li>
-              <li><a href="#">Couples Therapy</a></li>
-              <li><a href="#">Individual Counseling</a></li>
-              <li><a href="#">Premarital Counseling</a></li>
-              <li><a href="#">Online Counseling</a></li>
+              <li>
+                <a href="#">24/7 Counseling Support</a>
+              </li>
+              <li>
+                <a href="#">Couples Therapy</a>
+              </li>
+              <li>
+                <a href="#">Individual Counseling</a>
+              </li>
+              <li>
+                <a href="#">Premarital Counseling</a>
+              </li>
+              <li>
+                <a href="#">Online Counseling</a>
+              </li>
             </ul>
           </div>
-          
+
           <div className={styles.column}>
             <h3>Contact Us</h3>
             <address className={styles.address}>
-              123 Company St.<br />
-              City, State 12345<br />
-              <a href="mailto:visionhub@gmail.com">Email: visionhub.com<br/></a>
+              123 Company St.
+              <br />
+              City, State 12345
+              <br />
+              <a href="mailto:visionhub@gmail.com">
+                Email: visionhub.com
+                <br />
+              </a>
               <a href="tel:08140074633">Phone: +234 8140074633</a>
             </address>
           </div>
         </div>
       </footer>
-      
+
       {/* Footer-bottom */}
       <footer className={styles.footerBottom}>
         <p>© 2025 Vision Hub. All rights reserved.</p>
